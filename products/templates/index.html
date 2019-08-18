@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Testing Website Functions</h1>
+    <div class="row">
+        {% for product in products %}
+            <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ product.url_image }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.chair_model_no }}</h5>
+                    <p class="card-text">BDT. {{ product.price }} Features {{ product.features }}</p>
+                    <a href="#" class="btn btn-primary">Offers for this Product</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Offers Are Being Displayed</h1>
+    <div class="row">
+        {% for offer in offers %}
+            <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="{{ offer.image_url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ offer.code }}</h5>
+                    <p class="card-text">{{ offer.description }}</p>
+                    <a href="#" class="btn btn-primary">Avail offer</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
